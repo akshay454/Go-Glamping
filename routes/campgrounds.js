@@ -1,5 +1,5 @@
-var express = require("express");
-var router  = express.Router();
+var express    = require("express");
+var router     = express.Router();
 var Campground = require("../models/campground");
 var Comment    = require("../models/comment");
 var middleware = require("../middleware");
@@ -12,7 +12,7 @@ router.get("/",function(req,res){
 		if(err){
 			console.log("Error");
 		} else{
-			res.render("campgrounds/index" , {campgrounds : allcampgrounds, currentUser : req.user});
+			res.render("campgrounds/index" , {campgrounds : allcampgrounds, currentUser : req.user,page:'campgrounds'});
 		}
 	});
 });
@@ -34,7 +34,6 @@ router.post("/",middleware.isLoggedIn,function(req,res){
 		if(err){
 			console.log("Error");
 		} else{
-			console.log(req.user);
 			res.redirect("/campgrounds");
 		}
 	});
@@ -53,7 +52,6 @@ router.get("/:id",function(req,res){
 		if(err){
 			console.log(err);
 		} else{
-			console.log(foundCampground);
 			res.render("campgrounds/show",{campground : foundCampground});
 		}
 	});
