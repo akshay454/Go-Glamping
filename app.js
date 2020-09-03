@@ -18,10 +18,8 @@ var commentRoutes = require("./routes/comments"),
 	indexRoutes = require("./routes/index");
 
 
-var url = process.env.DATABASEURL || "mongodb://localhost:27017/yelp_camp"
-//mongoose.connect("mongodb://localhost:27017/yelp_camp", {useNewUrlParser: true, useUnifiedTopology: true});
+var url = process.env.DATABASEURL 
 mongoose.connect(url);
-//mongoose.connect("mongodb+srv://akshayrai:heisenberg121@cluster0-9z9v4.mongodb.net/yelpcamp?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.set("view engine","ejs");
 app.use(bodyParser.json()); // to support JSON-encoded bodies
@@ -59,5 +57,5 @@ app.use("/campgrounds",campgroundsRoutes);
 app.use("/campgrounds/:id/comments",commentRoutes);
 
 app.listen(process.env.PORT || 3000, process.env.IP , function(){
-	console.log(" The YelpCamp is serving");
+	console.log(" App is serving");
 });

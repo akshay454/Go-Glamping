@@ -2,28 +2,11 @@
 
 	<div id="logreg-forms">
 		<form action="/register" method="POST" class="form-signup">
-            <!-- <div class="social-login">
-                <button class="btn btn-lg facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign up with Facebook</span> </button>
-            </div>
-            <div class="social-login">
-                <button class="btn btn-lg google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign up with Google+</span> </button>
-            </div> -->
-                <!-- <p style="text-align:center">OR</p> -->
                 <input type="text" id="user-name" class="form-control" placeholder="User name" name="username" required="" autofocus="">
                 <input type="password" id="user-pass" class="form-control" placeholder="Password" name="password" required autofocus="">
                 <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
                 <a href="/login" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
         </form>
     </div>
-
-<!-- <h1>
-	SignUp
-</h1>
-
-<form action="/register" method="POST">
-	<input type="text" name="username" placeholder="User Name">
-	<input type="password" name="password" placeholder="Password">
-	<button> Sign Up</button>
-</form>  -->
 
 <%- include("./partials/footer") %>

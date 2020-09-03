@@ -18,7 +18,7 @@ router.get("/",function(req,res){
 });
 
 
-//CREATE : add new campgrounds to DB
+//CREATE : add new campground to DB
 router.post("/",middleware.isLoggedIn,function(req,res){
 	
 	var name  = req.body.name;
@@ -40,7 +40,7 @@ router.post("/",middleware.isLoggedIn,function(req,res){
 });
 
 
-//NEW : show form to create new campgrounds
+//NEW : show form to create new campground
 router.get("/new",middleware.isLoggedIn,function(req,res){
 	 res.render("campgrounds/new");
 });

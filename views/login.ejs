@@ -2,37 +2,16 @@
 
 	<div id="logreg-forms">
 		<form action="/login" method="POST" class="form-signin">
-            <!-- <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
-            <!-- <div class="social-login">
-                <button class="btn btn-lg facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span> </button>
-                <button class="btn btn-lg google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>
-            </div> --> 
-            <!-- <p style="text-align:center"> OR  </p> -->
             <input type="text" id="inputEmail" class="form-control" name="username" placeholder="Username" required="" autofocus="">
             <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required="">
 
             <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
             <a href="#" id="forgot_pswd">Forgot password?</a>
             <hr>
-            <!-- <p>Don't have an account!</p>  -->
 			<button onclick="location.href='/register'" class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Sign up New Account </button>
-            <!-- <a href="#"><button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Sign up New Account</button></a> -->
      	 </form>
 	</div>
 	  
-
-
-<!-- <h1>
-	Login Page.
-</h1>
-
-<form action="/login" method="POST">
-	<input type="text" name="username" placeholder="User Name">
-	<input type="password" name="password" placeholder="Password">
-	<button> Login</button>
-</form>
- -->
-
 
 
 <%- include("./partials/footer") %>
